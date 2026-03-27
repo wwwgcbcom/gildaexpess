@@ -1,99 +1,456 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GILDA'S EXPRESS PARCEL</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ============================================
+   GILDA'S EXPRESS PARCEL — style.css
+   Aesthetic: Luxury Gift Boutique
+   ============================================ */
 
-    <!-- Header -->
-    <header>
-        <h1>GILDA'S EXPRESS PARCEL</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#handbags">Handbags</a></li>
-                <li><a href="#surprises">Surprises</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap');
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h2>Gilda’s Express Parcel 
-Making your loved one smile is our priority</h2>
+/* ── CSS Variables ── */
+:root {
+  --gold:        #C9A96E;
+  --gold-light:  #E8D5A3;
+  --gold-dark:   #8B6914;
+  --rose:        #E8B4B8;
+  --rose-dark:   #C07080;
+  --cream:       #FDF8F2;
+  --warm-white:  #FEFCF8;
+  --charcoal:    #2C2418;
+  --text-muted:  #7A6A5A;
+  --border:      rgba(201,169,110,0.25);
+  --shadow:      0 8px 40px rgba(139,105,20,0.10);
+}
 
-        <a href="https://wa.me/233596121512?text=Hello%20I%20want%20to%20order%20a%20 surprise" class="btn" target="_blank">
-    Shop Now
-</a></a>
-    </section>
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About GILDA'S EXPRESS PARCEL</h2>
-        <p>
+html { scroll-behavior: smooth; }
 
-At GILDA’S EXPRESS PARCEL,we don’t just sell products,we create moments, memories, and magic.
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
 
-From stunning room decorations that transform ordinary spaces into unforgettable experiences, to thoughtful gifts for every occasion (yes, we’ve got both him and her covered) we make sure every detail speaks love and style.
+/* ── Typography ── */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.02em;
+}
 
-Craving something sweet? Our delicious pastries are baked to perfection, adding that extra touch of sweetness to your celebrations.
+h1 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; letter-spacing: 0.12em; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; }
+h3 { font-size: 1rem; font-weight: 400; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em; }
 
-We specialize in beautiful dowry wrapping, turning traditions into elegant presentations that leave lasting impressions. And when it comes to gifting with a twist, our money bouquets, flower bouquets, and luxury hampers are designed to wow at first sight.
+p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
 
-But that’s not all,step out in confidence with our trendy bags and heels, carefully selected to complement your vibe and elevate your look. 
+a { text-decoration: none; color: inherit; }
 
-Whether it’s love, celebration, surprise, or style,we bring your ideas to life with creativity, class, and a touch of sparkle.
+img { display: block; width: 100%; }
 
-Because every moment deserves to be beautifully expressed.
-</p>
-    </section>
+/* ── Decorative Divider ── */
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1rem auto 2rem;
+}
 
-    <!-- OUR SALES -->
-    <section id="OUR SALES">
-        <h2>OUR SALES</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="download.webp" alt="Handbag 1">
-                <h3>contact us for more bags</h3>
-            
-            </div>
-            <div class="product-card">
-                <img src="cake.jpeg" alt="Handbag 2">
-                <h3>contact us for all kinds of cakes and patries</h3>
-                
-            </div>
-            <div class="product-card">
-                <img src="bq.jpeg" alt="Handbag 3">
-                <h3>contact us for kinds of bouquets</h3>
-                
-            </div>
-        </div>
-    </section>
+/* ══════════════════════════════════════
+   HEADER
+══════════════════════════════════════ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(253,248,242,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 5%;
+  gap: 1.5rem;
+  box-shadow: 0 2px 20px rgba(139,105,20,0.06);
+}
 
-    <!-- Surprises Section -->
-    <section id="surprises">
-        <h2>Surprise Gifts</h2>
-        <p>We create personalized surprise parcels for birthdays, anniversaries, and special occasions. Make your loved ones feel extra special!</p>
-        <a href="https://chat.whatsapp.com/HdW8onmlUkWDqbxYOJwGaR?mode=gi_t" class="btn">Order a Surprise on our whatsapp platform</a>
-    </section>
+header h1 {
+  color: var(--gold-dark);
+  font-size: clamp(0.95rem, 2.2vw, 1.3rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: boadinimo@gmail.com</p>
-        <p>Phone: 0596121512</p>
-        <p>Location: Kumasi-pokukrom, Ghana</p>
-    </section>
+/* Decorative flourish before brand name */
+header h1::before {
+  content: '✦ ';
+  color: var(--gold);
+  font-size: 0.75em;
+}
+header h1::after {
+  content: ' ✦';
+  color: var(--gold);
+  font-size: 0.75em;
+}
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 GILDA'S EXPRESS PARCEL. All rights reserved.</p>
-    </footer>
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  flex-wrap: wrap;
+}
 
-</body>
-</html>
+nav ul li a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.3s;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width 0.35s ease;
+}
+
+nav ul li a:hover { color: var(--gold-dark); }
+nav ul li a:hover::after { width: 100%; }
+
+/* ══════════════════════════════════════
+   HERO SECTION
+══════════════════════════════════════ */
+.hero {
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 8%;
+  position: relative;
+  overflow: hidden;
+
+  /* Warm layered background */
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(232,180,184,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 80% 80%, rgba(201,169,110,0.12) 0%, transparent 60%),
+    linear-gradient(160deg, #FDF8F2 0%, #FEF6EC 50%, #FDF1EE 100%);
+}
+
+/* Decorative background rings */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 600px; height: 600px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.hero::after {
+  width: 900px; height: 900px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.25;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  color: var(--charcoal);
+  line-height: 1.3;
+  max-width: 780px;
+  margin-bottom: 0.5rem;
+  animation: fadeUp 0.9s ease both;
+}
+
+/* Italic second line */
+.hero h2 br + * ,
+.hero h2 {
+  white-space: pre-line;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  animation: fadeUp 0.9s 0.15s ease both;
+}
+
+/* ── Button ── */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold-dark);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.35s;
+  cursor: pointer;
+  animation: fadeUp 0.9s 0.3s ease both;
+  margin-top: 2rem;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--gold-dark), var(--rose-dark));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+  z-index: -1;
+}
+
+.btn:hover { color: var(--warm-white); border-color: transparent; }
+.btn:hover::before { transform: scaleX(1); }
+
+/* ══════════════════════════════════════
+   SECTION BASE
+══════════════════════════════════════ */
+section {
+  padding: 6rem 8%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+  color: var(--charcoal);
+  margin-bottom: 0.4rem;
+}
+
+/* Gold underline accent */
+section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--rose));
+  margin: 0.75rem auto 2.5rem;
+  border-radius: 1px;
+}
+
+/* ══════════════════════════════════════
+   ABOUT SECTION
+══════════════════════════════════════ */
+#about {
+  background: var(--warm-white);
+  max-width: 100%;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+#about > * {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about p {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--text-muted);
+  white-space: pre-line;
+}
+
+/* ══════════════════════════════════════
+   OUR SALES — Product Grid
+══════════════════════════════════════ */
+#\4f \55 \52 \20 \53 \41 \4c \45 \53  {
+  /* fallback for unusual id */
+}
+
+section[id="OUR SALES"] {
+  max-width: 100%;
+  background:
+    linear-gradient(180deg, var(--cream) 0%, #FEF6EC 100%);
+  padding: 6rem 8%;
+}
+
+section[id="OUR SALES"] h2,
+section[id="OUR SALES"] h2::after {
+  /* inherited from section base */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(44,36,24,0.55) 100%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(139,105,20,0.15); }
+.product-card:hover::before { opacity: 1; }
+
+.product-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover img { transform: scale(1.05); }
+
+.product-card h3 {
+  padding: 1.2rem 1.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+/* ══════════════════════════════════════
+   SURPRISES SECTION
+══════════════════════════════════════ */
+#surprises {
+  text-align: center;
+  background: linear-gradient(135deg, #FEF0EE 0%, #FDF8F2 60%, #FEF6EC 100%);
+  max-width: 100%;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+#surprises > * { max-width: 700px; margin-left: auto; margin-right: auto; }
+
+#surprises p {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  line-height: 1.9;
+}
+
+#surprises .btn { animation: none; }
+
+/* ══════════════════════════════════════
+   CONTACT SECTION
+══════════════════════════════════════ */
+#contact {
+  text-align: center;
+  max-width: 100%;
+  background: var(--charcoal);
+  padding: 5rem 8%;
+}
+
+#contact h2 { color: var(--gold-light); }
+#contact h2::after { background: linear-gradient(90deg, var(--gold), transparent); }
+
+#contact p {
+  color: rgba(255,255,255,0.6);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+#contact p:first-of-type { margin-top: 1rem; }
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer {
+  background: #1A140E;
+  text-align: center;
+  padding: 1.8rem 5%;
+  border-top: 1px solid rgba(201,169,110,0.15);
+}
+
+footer p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 5%;
+  }
+
+  header h1 { font-size: 0.9rem; text-align: center; }
+
+  nav ul { justify-content: center; gap: 1rem; }
+  nav ul li a { font-size: 0.68rem; }
+
+  .hero { min-height: 75vh; padding: 4rem 6%; }
+
+  section { padding: 4rem 6%; }
+
+  .product-grid { gap: 1.5rem; }
+  .product-card img { height: 220px; }
+
+  #contact { padding: 4rem 6%; }
+}
+
+@media (max-width: 480px) {
+  nav ul { gap: 0.6rem; }
+  .btn { padding: 0.85rem 2rem; font-size: 0.72rem; }
+  .product-card img { height: 200px; }
+}
