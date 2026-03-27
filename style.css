@@ -1,116 +1,99 @@
-/* General */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #fff0f5;
-    color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GILDA'S EXPRESS PARCEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* Header */
-header {
-    background-color: #ff1493;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
+    <!-- Header -->
+    <header>
+        <h1>GILDA'S EXPRESS PARCEL</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#handbags">Handbags</a></li>
+                <li><a href="#surprises">Surprises</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Gilda’s Express Parcel 
+Making your loved one smile is our priority</h2>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        <a href="https://wa.me/233596121512?text=Hello%20I%20want%20to%20order%20a%20 surprise" class="btn" target="_blank">
+    Shop Now
+</a></a>
+    </section>
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+    <!-- About Section -->
+    <section id="about">
+        <h2>About GILDA'S EXPRESS PARCEL</h2>
+        <p>
 
-nav a:hover {
-    text-decoration: underline;
-}
+At GILDA’S EXPRESS PARCEL,we don’t just sell products,we create moments, memories, and magic.
 
-/* Hero Section */
-.hero {
-    background-color: #ffe4e1;
-    text-align: center;
-    padding: 60px 20px;
-}
+From stunning room decorations that transform ordinary spaces into unforgettable experiences, to thoughtful gifts for every occasion (yes, we’ve got both him and her covered) we make sure every detail speaks love and style.
 
-.hero h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
+Craving something sweet? Our delicious pastries are baked to perfection, adding that extra touch of sweetness to your celebrations.
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
+We specialize in beautiful dowry wrapping, turning traditions into elegant presentations that leave lasting impressions. And when it comes to gifting with a twist, our money bouquets, flower bouquets, and luxury hampers are designed to wow at first sight.
 
-.btn {
-    display: inline-block;
-    background-color: #ff1493;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
+But that’s not all,step out in confidence with our trendy bags and heels, carefully selected to complement your vibe and elevate your look. 
 
-.btn:hover {
-    background-color: #ff69b4;
-}
+Whether it’s love, celebration, surprise, or style,we bring your ideas to life with creativity, class, and a touch of sparkle.
 
-/* Sections */
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
+Because every moment deserves to be beautifully expressed.
+</p>
+    </section>
 
-/* Product Grid */
-.product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+    <!-- OUR SALES -->
+    <section id="OUR SALES">
+        <h2>OUR SALES</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="download.webp" alt="Handbag 1">
+                <h3>contact us for more bags</h3>
+            
+            </div>
+            <div class="product-card">
+                <img src="cake.jpeg" alt="Handbag 2">
+                <h3>contact us for all kinds of cakes and patries</h3>
+                
+            </div>
+            <div class="product-card">
+                <img src="bq.jpeg" alt="Handbag 3">
+                <h3>contact us for kinds of bouquets</h3>
+                
+            </div>
+        </div>
+    </section>
 
-.product-card {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    width: 250px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+    <!-- Surprises Section -->
+    <section id="surprises">
+        <h2>Surprise Gifts</h2>
+        <p>We create personalized surprise parcels for birthdays, anniversaries, and special occasions. Make your loved ones feel extra special!</p>
+        <a href="https://chat.whatsapp.com/HdW8onmlUkWDqbxYOJwGaR?mode=gi_t" class="btn">Order a Surprise on our whatsapp platform</a>
+    </section>
 
-.product-card img {
-    width: 100%;
-    border-radius: 5px;
-}
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: boadinimo@gmail.com</p>
+        <p>Phone: 0596121512</p>
+        <p>Location: Kumasi-pokukrom, Ghana</p>
+    </section>
 
-.product-card h3 {
-    margin: 10px 0 5px 0;
-}
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 GILDA'S EXPRESS PARCEL. All rights reserved.</p>
+    </footer>
 
-.product-card p {
-    color: #ff1493;
-    font-weight: bold;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-}
+</body>
+</html>
